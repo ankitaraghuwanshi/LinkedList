@@ -16,4 +16,5 @@ namespace LinkedList
             next = null;
         }
     }
+
 }
