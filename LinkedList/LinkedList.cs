@@ -38,7 +38,7 @@ namespace LinkedList
             }
             else
             {
-                Console.WriteLine("previous linked list is");
+                Console.WriteLine("linked list is");
 
             }
             while (temp != null)
@@ -76,6 +76,16 @@ namespace LinkedList
                 node.next = Head;
                 Head = node;
             }
+        }
+        public void DeleteNodeatFirst()
+        {
+            if (this.Head == null)
+            {
+                Console.WriteLine("Nothing to delete list is empty");
+            }
+            Node temp = this.Head;
+            this.Head = this.Head.next;
+            Console.WriteLine(" delete first node" + temp.data);
         }
     }
 }

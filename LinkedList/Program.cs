@@ -23,6 +23,8 @@ namespace LinkedList
             linkedList.AddNodeatStart(node5);
             linkedList.Display();
 
+            linkedList.DeleteNodeatFirst();
+            linkedList.Display();
 
         }
     }
