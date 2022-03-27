@@ -38,7 +38,7 @@ namespace LinkedList
             }
             else
             {
-                Console.WriteLine("linked list as follows");
+                Console.WriteLine("previous linked list is");
 
             }
             while (temp != null)
@@ -49,6 +49,19 @@ namespace LinkedList
                     Console.Write(" ->");
                 }
                 temp = temp.next;
+            }
+        }
+        public void AppendNode(Node node)
+        {
+            if (Head == null && Tail == null)
+            {
+                Head = node;
+                Tail = node;
+            }
+            else
+            {
+                Tail.next = node;
+                Tail = node;
             }
         }
     }
