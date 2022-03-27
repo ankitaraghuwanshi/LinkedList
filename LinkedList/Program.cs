@@ -29,7 +29,7 @@ namespace LinkedList
             linkedList.DeleteEndNode();
             linkedList.Display();
 
-            Console.WriteLine("Enter Number want to Search");
+            Console.WriteLine("Enter Node you want to Search");
             int data = int.Parse(Console.ReadLine());
             bool res = linkedList.search(data);
             if (res == true)
@@ -38,14 +38,19 @@ namespace LinkedList
             }
             else
             {
-                Console.WriteLine("Data is not found");
+                Console.WriteLine(" node found ");
             }
 
             Node node_6 = new Node(40);    
             linkedList.Display();
-            Console.WriteLine("select position you want to add number");
+            Console.WriteLine("Enter position you want to add number");
             int data1 = int.Parse(Console.ReadLine());
             linkedList.AddSpecificNode(node_6, data1);
+            linkedList.Display();
+
+            Console.WriteLine("Select node for deletion"); 
+            data = int.Parse(Console.ReadLine());
+            linkedList.DeleteSpecificNode(data);
             linkedList.Display();
         }
     }

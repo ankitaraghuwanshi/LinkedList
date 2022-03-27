@@ -149,9 +149,32 @@ namespace LinkedList
                     node.next = temp.next;
                     temp.next = node;
                 }
-               
+
+            }
+        }
+        public void DeleteSpecificNode(int del_newdata)
+        {
+            if (this.Head == null)
+            {
+                Console.WriteLine("Nothing to delete list is empty");
+            }
+            else
+            {
+                if (Head == null)
+                {
+                    Console.WriteLine("Nothing To Delete");
+                }
+                Node temp = Head;
+                while (temp != null)
+                {
+                    if (temp.next.data == del_newdata)
+                    {
+                        temp.next = temp.next.next;
+                        break;
+                    }
+                    temp = temp.next;
+                }
             }
         }
     }
 }
-
