@@ -122,6 +122,36 @@ namespace LinkedList
             }
             return false;
         }
+        public void AddSpecificNode(Node node, int position)
+        {
+
+            if (position < 1)
+            {
+                Console.WriteLine("enter the position you want to add number");
+            }
+            else if (position == 1)
+            {
+                node.next = Head;
+                Head = node;
+            }
+            else
+            {
+                Node temp = Head;
+                for (int i = 1; i < position - 1; i++)
+                {
+                    if (temp != null)
+                    {
+                        temp = temp.next;
+                    }
+                }
+                if (temp != null)
+                {
+                    node.next = temp.next;
+                    temp.next = node;
+                }
+               
+            }
+        }
     }
 }
 
